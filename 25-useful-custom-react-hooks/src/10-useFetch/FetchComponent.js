@@ -3,7 +3,11 @@ import useFetch from "./useFetch"
 
 export default function FetchComponent() {
   const [id, setId] = useState(1)
-  const { loading, error, value } = useFetch(`https://jsonplaceholder.typicode.com/todos/${id}`, {}, [id])
+  const { loading, error, value } = useFetch(
+    `https://jsonplaceholder.typicode.com/todos/${id}`,
+    {},
+    [id]
+  )
 
   return (
     <div>
